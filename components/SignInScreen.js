@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Alert, ActivityIndicator, Text, TouchableOpacity } from 'react-native';
 import axios from 'axios';
-import { useUser } from '../components/UserContext'; // Correct usage of useUser
+import { useUser } from '../components/UserContext'; // Uso correto do Usuário
 
 const SignInScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const { setUser } = useUser(); // Correct usage of context to access setUser
+  const { setUser } = useUser(); // Uso correto do contexto para acessar Usuário
 
   const handleSignIn = async () => {
     if (!email || !password) {
