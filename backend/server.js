@@ -1,15 +1,20 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const authRoutes = require('./routes/user.route'); // Certifique-se de ter este arquivo e caminho definidos corretamente
+const authRoutes = require('./routes/user.route');
 
 const app = express();
 const port = process.env.PORT || 5000;
-require('dotenv').config(); // No topo do seu arquivo principal (por exemplo, app.js ou server.js)
+require('dotenv').config();
 
 // Middleware
 app.use(cors());
-app.use(express.json()); // Usando o middleware integrado do Express
+app.use(express.json());
+
+// ROTA RAIZ (corrige erro do Render)
+app.get('/', (req, res) => {
+  res.send("🚀 Backend RotaLimpa está online!");
+});
 
 // MongoDB conexão 
 mongoose.connect('mongodb+srv://pasindu:pasindu@cluster0.gzomo.mongodb.net/garbageCollectionDB', {
@@ -25,12 +30,11 @@ mongoose.connection.on('error', (error) => {
   console.log('MongoDB connection error:', error);
 });
 
-// Routes
-app.use('/api/auth', authRoutes); // Rotas de autenticação para inscrição e login
+// Rotas da API
+app.use('/api/auth', authRoutes);
 app.use('/api/routes', require('./routes/routes.route'));
 app.use('/api/feedback', require('./routes/feedback.route'));
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-// RotaLImpa
