@@ -19,18 +19,18 @@ const RouteScreen = () => {
       <Text style={styles.header}>Adicionar/Atualizar Rota</Text>
       <TextInput
         style={styles.input}
-        placeholder="Truck Code"
+        placeholder="Código do caminhão"
         value={truckCode}
         onChangeText={setTruckCode}
       />
       <TextInput
         style={styles.input}
-        placeholder="Route Details"
+        placeholder="Detalhes da rota"
         value={routeDetails}
         onChangeText={setRouteDetails}
         multiline
       />
-      <Button title="Submit Route" onPress={handleSubmit} />
+      <Button title="Enviar rota" onPress={handleSubmit} />
     </View>
   );
 };

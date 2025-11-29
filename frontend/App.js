@@ -27,13 +27,13 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="RouteScreen" component={RouteScreen} />
         <Stack.Screen name="FeedbackScreen" component={AddFeedbackScreen} />
-        <Stack.Screen name="ViewAllFeedback" component={ViewAllFeedbackScreen} options={{ title: 'View All Feedback' }} />
-        <Stack.Screen name="UpdateFeedback" component={UpdateFeedbackScreen} options={{ title: 'Update Feedback' }} />
-        <Stack.Screen name="AddRoute" component={AddRouteScreen} options={{ title: 'Add New Route' }} />
-        <Stack.Screen name="ViewAllRoutes" component={ViewAllRoutesScreen} options={{ title: 'View All Routes' }} />
-        <Stack.Screen name="UpdateRoute" component={UpdateRouteScreen} options={{ title: 'Update Route' }} />
-        <Stack.Screen name="MapScreen" component={MapScreen} options={{ title: 'Map' }} />
-        <Stack.Screen name="Report" component={FeedbackReportScreen} options={{ title: 'Report' }} />
+        <Stack.Screen name="ViewAllFeedback" component={ViewAllFeedbackScreen} options={{ title: 'Ver todos os comentários' }} />
+        <Stack.Screen name="UpdateFeedback" component={UpdateFeedbackScreen} options={{ title: 'Atualizar comentários' }} />
+        <Stack.Screen name="AddRoute" component={AddRouteScreen} options={{ title: 'Adicionar nova Rota' }} />
+        <Stack.Screen name="ViewAllRoutes" component={ViewAllRoutesScreen} options={{ title: 'Ver todas as rotas' }} />
+        <Stack.Screen name="UpdateRoute" component={UpdateRouteScreen} options={{ title: 'Atualizar rota' }} />
+        <Stack.Screen name="MapScreen" component={MapScreen} options={{ title: 'Mapa da cidade' }} />
+        <Stack.Screen name="Report" component={FeedbackReportScreen} options={{ title: 'Reportar' }} />
       </Stack.Navigator>
     </NavigationContainer>
     </UserProvider>

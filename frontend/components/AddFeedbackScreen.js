@@ -30,7 +30,7 @@ const AddFeedbackScreen = () => {
       const response = await axios.get('http://192.168.1.34:5000/api/routes');
       setTruckIds(response.data.map(truck => truck.truckId));
     } catch (error) {
-      console.error('Erro fetching truck IDs:', error);
+      console.error('Erro ao obter ids dos caminhões:', error);
       Alert.alert('Erro', 'Falha ao buscar IDs de caminhão');
     }
   };

@@ -8,7 +8,7 @@ const FeedbackScreen = () => {
 
   const handleSubmit = async () => {
     if (!userId || !feedback) {
-      Alert.alert('Error', 'Please fill all the fields');
+      Alert.alert('Erro', 'Por favor, preencha todos os campos.');
       return;
     }
     
@@ -28,7 +28,7 @@ const FeedbackScreen = () => {
     } catch (error) {
       console.error(error);
       // Lidando com erros aqui
-      Alert.alert('Error', 'Falha ao enviar feedback');
+      Alert.alert('Erro', 'Falha ao enviar feedback');
     }
   };
 

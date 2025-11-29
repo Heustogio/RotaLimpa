@@ -29,8 +29,8 @@ const FeedbackReportScreen = () => {
       const response = await axios.get('http://192.168.1.34:5000/api/feedback');
       setFeedbacks(response.data);
     } catch (error) {
-      console.error('Failed to fetch feedbacks:', error);
-      Alert.alert('Error', 'Failed to fetch feedbacks');
+      console.error('Não foi possível obter feedbacks.:', error);
+      Alert.alert('Erro', 'Não foi possível obter feedbacks.');
     } finally {
       setLoading(false);
     }
@@ -51,7 +51,7 @@ const FeedbackReportScreen = () => {
           <body>
             ${feedbacks.map((feedback, index) => `
               <h1>Feedback ${index + 1}</h1>
-              <p>Truck ID: ${feedback.truckId}</p>
+              <p>Id Do Caminhão: ${feedback.Caminhão}</p>
               <p>Feedback: ${feedback.feedback}</p>
               <p>Rating: ${feedback.rating} ${renderStars(feedback.rating)}</p>
               <p>Date Created: ${feedback.dateCreated}</p>
@@ -63,8 +63,8 @@ const FeedbackReportScreen = () => {
       const file = await printToFileAsync({ html });
       await shareAsync(file.uri);
     } catch (error) {
-      console.error('Failed to generate or share PDF:', error);
-      Alert.alert('Error', 'Failed to generate or share PDF');
+      console.error('Falha ao gerar ou compartilhar o PDF:', error);
+      Alert.alert('Erro', 'Falha ao gerar ou compartilhar o PDF');
     } finally {
       setLoading(false);
     }
@@ -83,8 +83,8 @@ const FeedbackReportScreen = () => {
               await axios.delete(`http://192.168.1.34:5000/api/feedback/${id}`);
               setFeedbacks(feedbacks.filter(feedback => feedback._id !== id));
             } catch (error) {
-              Alert.alert('Error', 'Failed to delete feedback');
-              console.error('Failed to delete feedback:', error);
+              Alert.alert('Erro', 'Falha ao excluir o feedback');
+              console.error('Falha ao excluir o feedback:', error);
             }
           }
         }
@@ -112,7 +112,7 @@ const FeedbackReportScreen = () => {
         {feedbacks.map(feedback => (
           <View key={feedback._id} style={styles.feedbackItem}>
             <View style={{ flex: 1 }}>
-              <Text style={styles.feedbackText}>Truck ID: {feedback.truckId}</Text>
+              <Text style={styles.feedbackText}>Id do Caminhão: {feedback.truckId}</Text>
               <Text style={styles.feedbackText}>Feedback: {feedback.feedback}</Text>
               <View style={styles.ratingContainer}>
                 <Text style={styles.feedbackText}>{renderStars(feedback.rating)}</Text>
@@ -122,13 +122,13 @@ const FeedbackReportScreen = () => {
               onPress={() => navigation.navigate('UpdateFeedback', { feedbackId: feedback._id })}
               style={styles.icon}
             >
-              <Icon name="edit" size={20} color="#007bff" />
+              <Icon name="editar" size={20} color="#007bff" />
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => deleteFeedback(feedback._id)}
               style={styles.icon}
             >
-              <Icon name="trash" size={20} color="#dc3545" />
+              <Icon name="Lixo" size={20} color="#dc3545" />
             </TouchableOpacity>
           </View>
         ))}

@@ -15,7 +15,7 @@ const MapScreen = () => {
         const response = await axios.get('http://192.168.1.34:5000/api/routes');
         setRoutes(response.data);
       } catch (error) {
-        console.error('Error fetching routes:', error);
+        console.error('Erro ao buscar rotas:', error);
       }
     };
 
@@ -28,7 +28,7 @@ const MapScreen = () => {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder="Search by Truck ID"
+        placeholder="Pesquisar ID do caminhão"
         onChangeText={text => setSearchText(text)}
         value={searchText}
       />
@@ -61,7 +61,7 @@ const MapScreen = () => {
           <Marker
             key={`end-${index}`}
             coordinate={route.routePoints[route.routePoints.length - 1]}
-            title={`End: ${route.endDistrict} - Truck ID: ${route.truckId}`}
+            title={`End: ${route.endDistrict} - caminhão id: ${route.truckId}`}
             pinColor="red"
           />
         ))}

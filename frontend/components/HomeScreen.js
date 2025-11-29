@@ -77,7 +77,7 @@ const HomeScreen = ({ route, navigation }) => {
             onPress={() => handleNavigation('ViewAllFeedback')}
           >
             <Icon name="assignment" size={20} color="white" />
-            <Text style={styles.buttonText}>Manage Feedbacks</Text>
+            <Text style={styles.buttonText}>Modificar Feedbacks</Text>
           </TouchableOpacity>
         )}
         {(userType === 'admin') && (

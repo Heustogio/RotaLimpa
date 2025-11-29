@@ -12,41 +12,23 @@ const AddRouteScreen = ({ navigation }) => {
     const [routePoints, setRoutePoints] = useState([]);
   
     const routePointsData = {
-        Colombo: [
-            { latitude: 6.9271, longitude: 79.8612 },
+        Anapolis_Centro: [
+            { latitude: -16.3285, longitude: -48.9534 },
         ],
-        Ampara: [
-            { latitude: 7.2891, longitude: 81.6533 },
+        Recanto_do_Sol: [
+            { latitude: -16.2803, longitude: -48.9311 },
         ],
-        Nugegoda: [
-            { latitude: 6.8907, longitude: 79.9018 },
+        Jundiai: [
+            { latitude: -16.3306, longitude: -48.9485 },
         ],
-        Katunayaka: [
-            { latitude: 7.1725, longitude: 79.8854 }, 
+        Vila_Santana: [
+            { latitude: -16.3337, longitude: -48.9519 },
         ],
-        Kandy: [
-            { latitude: 7.2906, longitude: 80.6337 },
+        Bairro_Industrial: [
+            { latitude: -16.3150, longitude: -49.0000 },
         ],
-        Galle: [
-            { latitude: 6.0535, longitude: 80.2209 },
-        ],
-        Anuradhapura: [
-            { latitude: 8.3114, longitude: 80.4037 },
-        ],
-        Jaffna: [
-            { latitude: 9.6685, longitude: 80.0074 },
-        ],
-        Trincomalee: [
-            { latitude: 8.5874, longitude: 81.2152 },
-        ],
-        Badulla: [
-            { latitude: 6.9934, longitude: 81.0550 },
-        ],
-        Ratnapura: [
-            { latitude: 6.6828, longitude: 80.3992 },
-        ],
-        Negombo: [
-            { latitude: 7.2008, longitude: 79.8737 },
+        Aterro_Sanitario: [
+            { latitude: -16.3500, longitude: -48.9800 },
         ],
     };    
   
