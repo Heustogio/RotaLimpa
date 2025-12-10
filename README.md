@@ -45,28 +45,69 @@ Pré-requisitos certifique-se de ter as seguintes ferramentas instaladas em sua 
 
 •MongoDB (servidor local ou acesso a um cluster remoto)
 
-Backend
+## Dependências do Aplicativo RotaLimpa
 
-1.Navegue até o backend do projeto:
+O aplicativo RotaLimpa foi desenvolvido utilizando a plataforma **React Native** com o framework **Expo**.
+Para que a aplicação seja executada corretamente, é necessário que o ambiente do desenvolvedor disponha das seguintes dependências:
 
-2.Instale as dependências:
+### 1. Ferramentas necessárias
 
-3.Inicie o servidor backend:
+* **Node.js** (versão recomendada: 18 LTS ou superior)
+* **npm** (instalado junto com o Node)
+* **Expo CLI** (instalado globalmente com o comando `npm install -g expo-cli`)
 
-Front-end
+---
 
-1.Navegue até a pasta frontend do projeto:
+### 2. Dependências do projeto (package.json)
 
-2.Instale as dependências:
+As bibliotecas usadas no aplicativo são:
 
-3.Configuração da API: No seu código frontend, localize o arquivo onde a URL base da API estiver configurada (geralmente em src/services/api.js ou similar). Altere a baseURL para apontar para o endereço IP da sua máquina onde o backend está rodando, seguido da porta 5000. Exemplo:
+#### Dependências principais
 
-4.Inicie o aplicativo Expo:
+* `expo`
+* `react`
+* `react-native`
+* `@react-native-picker/picker`
+* `@react-navigation/native`
+* `@react-navigation/native-stack`
+* `axios`
+* `expo-print`
+* `expo-sharing`
+* `expo-status-bar`
+* `react-native-gesture-handler`
+* `react-native-html-to-pdf`
+* `react-native-maps`
+* `react-native-pdf`
+* `react-native-pdf-lib`
+* `react-native-safe-area-context`
+* `react-native-screens`
+* `react-native-table-component`
+* `react-native-vector-icons`
 
-5.Escaneie o código QR com o aplicativo Expo Go no seu celular para visualizar o aplicativo.
-Public users receive alerts when the garbage collection truck is near.
-Garbage collectors and municipal admins are notified of collection updates.
-Feedback & Ratings
+#### Dependências de desenvolvimento
 
-Residents can provide ratings and feedback on waste collection services.
-Municipal authorities can analyze feedback and take necessary actions.
+* `@babel/core`
+
+---
+
+### 3. Instalação das dependências
+
+Após clonar o repositório, dentro da pasta do projeto, executar:
+
+```
+npm install
+```
+
+Este comando instala automaticamente todas as dependências listadas no arquivo **package.json**.
+
+---
+
+### 4. Execução do aplicativo
+
+Após instalar as dependências, o aplicativo pode ser iniciado com:
+
+```
+npx expo start
+```
+
+O Expo abrirá um painel permitindo executar o app no emulador Android, no dispositivo físico ou no navegador.
