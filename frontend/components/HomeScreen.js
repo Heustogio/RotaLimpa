@@ -50,7 +50,7 @@ const HomeScreen = ({ route, navigation }) => {
             onPress={() => handleNavigation('FeedbackScreen')}
           >
             <Icon name="feedback" size={20} color="white" />
-            <Text style={styles.buttonText}>Criar Feedback</Text>
+            <Text style={styles.buttonText}>Fazer Denúncia</Text>
           </TouchableOpacity>
         )}
         {(userType === 'admin' || userType === 'publicUser' || userType === 'garbageCollector') && (
@@ -59,7 +59,7 @@ const HomeScreen = ({ route, navigation }) => {
             onPress={() => handleNavigation('MapScreen')}
           >
             <Icon name="map" size={20} color="white" />
-            <Text style={styles.buttonText}>Ver localizações</Text>
+            <Text style={styles.buttonText}>Ver Rotas</Text>
           </TouchableOpacity>
         )}
         {(userType === 'admin') && (

@@ -35,11 +35,11 @@ const MapScreen = () => {
       <MapView
         style={styles.map}
         initialRegion={{
-          latitude: 7.2906,
-          longitude: 80.6337,
-          latitudeDelta: 1,
-          longitudeDelta: 1,
-        }}
+  latitude: -16.328547,
+  longitude: -48.953403,
+  latitudeDelta: 0.05,
+  longitudeDelta: 0.05,
+}}
       >
         {filteredRoutes.map((route, index) => (
           <Polyline
